@@ -1,0 +1,118 @@
+/* .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Roboto Mono', monospace;
+  background-color: #181818;
+  color: #fff;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  padding: 20px;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+.search {
+  display: flex;
+  gap: 10px;
+}
+
+.search input {
+  padding: 8px;
+  border: none;
+  background-color: #282828;
+  color: #fff;
+}
+
+.search-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+main {
+  width: 90%;
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: #282828;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  margin-bottom: 15px;
+}
+
+.action-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.action-button:hover {
+  background-color: #0062cc;
+}
+
+.pagination {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.previous,
+.next,
+.page-number {
+  background-color: #282828;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.previous:hover,
+.next:hover,
+.page-number:hover {
+  background-color: #007bff;
+}  */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
