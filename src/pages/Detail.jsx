@@ -31,26 +31,30 @@ function Detail() {
           Retour
         </Link>
 
-        <div className=" flex flex-col items-center dark:bg-gray-800 dark:border-gray-700  w-full bg-cyan-700">
+        <div className=" flex flex-col items-center dark:bg-gray-800 dark:border-gray-700  w-full bg-cyan-700 rounded-lg">
           <div className="max-w-80 mx-auto  dark:bg-gray-800 dark:border-gray-700 p-4">
             <img
               src={character.image}
               alt={character.name}
-              className="w-full object-cover rounded-t-lg"
+              className="w-full object-cover rounded-lg"
             />
           </div>
           <div className="text-left p-4 w-1/2">
-            <h2 className="text-xl  font-semibold mb-2 text-white dark:text-white">
+            <h2 className="text-xl  font-semibold mb-2 text-dark dark:text-white">
               {character.name}
             </h2>
-            <p className="text-dark dark:text-white">{character.species}</p>
-            <p className="mb-3 text-dark dark:text-white">{character.status}</p>
+            <p className="text-gray-800 dark:border-gray-700">
+              {character.species}
+            </p>
+            <p className="mb-3 text-gray-800 dark:border-gray-700">
+              {character.status}
+            </p>
 
             {/* <ul className="mb-3 text-white dark:text-white">
               <h3 className="font-bold">Episodes:</h3>
               <Link className="mb-2">{character.episode}.split("/").pop()</Link>
             </ul> */}
-            <ul className="mb-3 text-white dark:text-white">
+            <ul className="mb-3 text-dark dark:text-white">
               <h3 className="font-bold">Episodes:</h3>
 
               {/* ?. syntaxe js pour vérifier si "character.episode" existe avant d'essayer
@@ -60,7 +64,7 @@ function Detail() {
                 <li key={index} className="mb-2">
                   <a
                     href={episodeUrl}
-                    className="text-blue-400 underline hover:text-blue-600"
+                    className="text-cyan-400 underline hover:text-pink-600"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
