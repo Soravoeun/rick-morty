@@ -43,17 +43,13 @@ function Detail() {
             <h2 className="text-xl  font-semibold mb-2 text-dark dark:text-white">
               {character.name}
             </h2>
-            <p className="text-gray-800 dark:border-gray-700">
+            <p className="text-gray-700 dark:border-gray-400">
               {character.species}
             </p>
-            <p className="mb-3 text-gray-800 dark:border-gray-700">
+            <p className="mb-3 text-gray-700 dark:border-gray-400">
               {character.status}
             </p>
 
-            {/* <ul className="mb-3 text-white dark:text-white">
-              <h3 className="font-bold">Episodes:</h3>
-              <Link className="mb-2">{character.episode}.split("/").pop()</Link>
-            </ul> */}
             <ul className="mb-3 text-dark dark:text-white">
               <h3 className="font-bold">Episodes:</h3>
 

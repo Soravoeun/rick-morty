@@ -43,19 +43,6 @@ function Grids() {
       });
   }, [status]);
 
-  // 8 / page
-  //  nbPage = Math.ceil(data.results.length / 8);
-
-  // Logique de pagination
-  // const indexOfLastCharacter = currentPage * charactersPerPage;
-  // const indexOfFirstCharacter = indexOfLastCharacter - charactersPerPage;
-  // const currentCharacters = characters.slice(
-  //   indexOfFirstCharacter,
-  //   indexOfLastCharacter
-  // );
-
-  // Fonction pour changer la page
-  // const paginate = (pageNumber) => setCurrentPage(pageNumber);
   console.log(
     characters.filter(
       (item, index) =>

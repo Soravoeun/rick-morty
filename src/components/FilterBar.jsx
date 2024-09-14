@@ -39,7 +39,8 @@ function FilterBar() {
 
   const handleClearSearch = () => {
     setSearchTerm("");
-    setCharacters([]); // Réinitialiser les résultats lorsque la recherche est effacée
+    // Réinitialiser les résultats lorsque la recherche est effacée
+    setCharacters([]);
   };
 
   return (

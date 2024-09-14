@@ -10,7 +10,7 @@ function Card(props) {
           <img
             src={image}
             alt="imageAlt"
-            className="w-full object-cover rounded-t-lg"
+            className="w-full object-cover rounded-lg"
           />
         </div>
         <div className="p-2 flex flex-col">
