@@ -9,7 +9,7 @@ function Template() {
     <>
       <NavBar />
       <div
-        className="mx-3 bg-local bg-cover"
+        className="mx-3 bg-local bg-center bg-no-repeat bg-cover"
         style={{ backgroundImage: "url(src/assets/backG.jpg)" }}
       >
         <Outlet />

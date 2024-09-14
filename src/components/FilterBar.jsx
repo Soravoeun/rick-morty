@@ -6,8 +6,8 @@ import Card from "./Card";
 import { CharactersContext } from "../pages/Home";
 
 function FilterBar() {
-  const [searchTerm, setSearchTerm] = useState("");
   const { status } = useParams();
+  const [searchTerm, setSearchTerm] = useState("");
   const { characters, setCharacters } = useContext(CharactersContext);
   const { currentPage, setCurrentPage } = useContext(CharactersContext);
   const { charactersPerPage, getPageNumber } = useContext(CharactersContext);
@@ -45,9 +45,9 @@ function FilterBar() {
 
   return (
     <nav className="border-gray-200 p-2">
-      <div className="flex items-center justify-between mx-3">
-        {/* Left Section with Alive, Dead, and Unknown buttons */}
-        <div className="flex space-x-4">
+      <div className="flex lg:flex-row md:flex-row max-sm:flex-col  items-center justify-between mx-3">
+        {/* Section  gauche avec Alive, Dead, and Unknown */}
+        <div className="flex space-x-4 justify-center md:justify-start">
           <Link to={status === "alive" ? "/" : "/filter/alive"}>
             <button
               className={`${
@@ -80,8 +80,8 @@ function FilterBar() {
         </div>
 
         {/* Right Section with Search bar and close button */}
-        <div className="flex items-center space-x-2">
-          <div className="relative hidden md:block">
+        <div className="flex max-sm:justify-center justify-end items-center w-full space-x-2 max-sm:pt-4">
+          <div className="relative max-sm:w-m-96 ">
             <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
               <ImSearch className="w-4 h-4 text-gray-500 dark:text-gray-400" />
             </div>
@@ -103,15 +103,6 @@ function FilterBar() {
               </button>
             )}
           </div>
-
-          {/* Search Icon for Mobile View */}
-          <button
-            type="submit"
-            onClick={handleSearch}
-            className="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
-          >
-            <ImSearch className="w-4 h-4 text-gray-500 dark:text-gray-400" />
-          </button>
         </div>
       </div>
     </nav>
