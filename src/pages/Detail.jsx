@@ -6,6 +6,7 @@ function Detail() {
   const { id } = useParams();
 
   const [character, setCharacter] = useState([]);
+  const [episodes, setEpisodes] = useState([]);
 
   useEffect(() => {
     const singleCharacter = `https://rickandmortyapi.com/api/character/${id}`;
@@ -13,11 +14,13 @@ function Detail() {
       .then((response) => response.json())
       .then((data) => {
         setCharacter(data);
+        setEpisodes(data.episode);
       })
       .catch((error) => {
         console.error("Erreur lors de la récupération des données :", error);
       });
   }, [id]);
+
   return (
     <div className=" p-4">
       <div>
@@ -40,28 +43,32 @@ function Detail() {
             <h2 className="text-xl  font-semibold mb-2 text-white dark:text-white">
               {character.name}
             </h2>
-            <p className="text-white dark:text-white">{character.species}</p>
-            <p className="mb-3 text-white dark:text-white">
-              {character.status}
-            </p>
-            <p className="mb-3 text-gray-700 dark:text-gray-400">
-              {/*Episodes: {character.episode.length} */}
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla qui aticie deserent sintit anie at est idart mon proident,
-              sunt in culpa Lorem ipsum dolor sit amet, consectetur adipisicing
-              elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-              aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-              dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est
-              laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do
-            </p>
+            <p className="text-dark dark:text-white">{character.species}</p>
+            <p className="mb-3 text-dark dark:text-white">{character.status}</p>
+
+            {/* <ul className="mb-3 text-white dark:text-white">
+              <h3 className="font-bold">Episodes:</h3>
+              <Link className="mb-2">{character.episode}.split("/").pop()</Link>
+            </ul> */}
+            <ul className="mb-3 text-white dark:text-white">
+              <h3 className="font-bold">Episodes:</h3>
+
+              {/* ?. syntaxe js pour vérifier si "character.episode" existe avant d'essayer
+              de parcourir la liste, pour éviter des erreurs si la valeur est
+              undefined ou null. */}
+              {character.episode?.map((episodeUrl, index) => (
+                <li key={index} className="mb-2">
+                  <a
+                    href={episodeUrl}
+                    className="text-blue-400 underline hover:text-blue-600"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Episode {index + 1}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
