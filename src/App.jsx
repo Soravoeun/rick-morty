@@ -8,14 +8,14 @@ function Template() {
   return (
     <>
       <div
-        className="mx-3 bg-local  bg-cover bg-no-repeat h-screen max-sm:bg-center max-sm:max-h-screen"
+        className="relative min-h-screen bg-cover bg-center bg-no-repeat w-full"
         // style={{ backgroundImage: "url(src/assets/backG.jpg)" }}
         style={{
           backgroundImage: `url('https://lh3.googleusercontent.com/gs-DGCbuLZJbTYTBIyWhxFN1l_km47khDQuY8IBR9n8QgONLFYm1FzN8eC503g7oqKaNU2n5nwM9OckNV0h5dDNtIw=s1600-w1600-h1000')`,
         }}
       >
         <NavBar />
-        <div className="mx-3 h-full">
+        <div className="relative z-10 h-full w-full">
           <Outlet />
         </div>
       </div>
