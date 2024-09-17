@@ -38,8 +38,8 @@ function Home() {
           </h1> */}
 
           {/* Titre Rick et Morty avec effet 3D */}
-          <div className="flex justify-center items-center">
-            <div className="text-8xl font-bold relative text-cyan-700 animate-swing">
+          <div className="flex justify-center items-center max-lg:justify-center max-sm:justify-center p-4">
+            <div className="text-8xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold relative text-cyan-700 animate-swing">
               <span className="relative inline-block">
                 {/* Effet d'ombre bleue sur chaque lettre */}
                 <span className="relative z-10">R</span>
@@ -56,18 +56,18 @@ function Home() {
                 <span className="relative z-10">T</span>
                 <span className="relative z-10">Y</span>
                 {/* Ombre bleue décalée */}
-                {/* <span className="absolute inset-0 transform translate-x-6 translate-y-6 blur-sm">
+                <span className="flex justify-center items-center absolute inset-0 transform translate-x-2 translate-y-2 blur-sm">
                   RICK ET MORTY
-                </span> */}
+                </span>
 
                 {/* Ombres multiples pour effet 3D */}
-                <span className="absolute inset-0 transform text-teal-700 translate-x-2 translate-y-2 blur-sm opacity-75">
+                <span className=" flex justify-center items-center absolute inset-0 transform text-teal-700 translate-x-2 translate-y-2 blur-sm opacity-75">
                   RICK ET MORTY
                 </span>
-                <span className="absolute inset-0 transform text-cyan-700 translate-x-4 translate-y-4 blur-sm opacity-50">
+                <span className=" flex justify-center items-center absolute inset-0 transform text-cyan-700 translate-x-4 translate-y-4 blur-sm opacity-50">
                   RICK ET MORTY
                 </span>
-                <span className="absolute inset-0 transform text-yellow-300 translate-x-6 translate-y-6 blur-lg opacity-30">
+                <span className="flex justify-center items-center absolute inset-0 transform text-yellow-300 translate-x-6 translate-y-6 blur-lg opacity-30">
                   RICK ET MORTY
                 </span>
               </span>
