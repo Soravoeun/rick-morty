@@ -52,7 +52,7 @@ function Grids() {
   );
   return (
     <div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 py-8 px-24  max-sm:px-14 w-full">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 py-8 px-24  max-sm:px-12 w-full">
         {characters
           .filter(
             (item, index) =>
