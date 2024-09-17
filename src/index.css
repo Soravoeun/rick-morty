@@ -116,3 +116,19 @@ main {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes swing {
+  0% {
+    transform: translateX(-20px);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}
+
+.animate-swing {
+  animation: swing 1s ease-in-out infinite;
+}
