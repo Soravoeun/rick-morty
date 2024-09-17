@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 function Card(props) {
   const { id, image, name, species, status } = props;
   return (
-    <div className="max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <div className="flex flex-col justify-center max-sm:px-18">
         <div className="w-full">
           <img
             src={image}
             alt="imageAlt"
-            className="w-full  object-cover rounded-lg "
+            className="w-full object-cover rounded-lg "
           />
         </div>
         <div className="p-4 flex flex-col">

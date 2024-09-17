@@ -52,7 +52,7 @@ function Grids() {
   );
   return (
     <div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 py-8 px-24 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 py-8 px-24 w-full">
         {characters
           .filter(
             (item, index) =>
@@ -61,10 +61,7 @@ function Grids() {
                 (currentPage - 1) * charactersPerPage + charactersPerPage
           )
           .map((item, index) => (
-            <div
-              key={index}
-              className="max-w-xs rounded overflow-hidden shadow-lg"
-            >
+            <div key={index} className="rounded overflow-hidden shadow-lg ">
               <Card {...item} />
             </div>
           ))}
