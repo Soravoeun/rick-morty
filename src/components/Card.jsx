@@ -13,7 +13,7 @@ function Card(props) {
             className="w-full  object-cover rounded-lg "
           />
         </div>
-        <div className="p-2 flex flex-col">
+        <div className="p-4 flex flex-col">
           <h2 className="text-xl font-semibold text-left dark:text-white">
             {name}
           </h2>
