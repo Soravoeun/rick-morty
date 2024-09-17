@@ -30,6 +30,12 @@ function Home() {
         }}
       >
         <main>
+          <h1
+            className="text-center text-cyan-700 font-bold p-4 rounded-full shadow-lg mb-8 
+              text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
+          >
+            Rick et Morty
+          </h1>
           <FilterBar />
           <Grids />
         </main>
